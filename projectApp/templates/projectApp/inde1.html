@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Load into database </title>
+</head>
+
+<body>
+<h1>Create a Post </h1>
+<form action="" method="POST">
+{% csrf_token %}
+Youtube id: <input type="text" name="youtube_id_html"/><br/>
+Title:<input type="text" name="title_html"/><br/>
+Description: <br/>
+<textarea cols="35" rows="8" name="description_html">
+</textarea><br/>
+<input type="submit" value="Post"/>
+</form>
+</body>
+
+</html>

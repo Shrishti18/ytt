@@ -1,0 +1,60 @@
+{% load blag_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
+        <title>Project</title>
+        <link rel="stylesheet" href="{% static 'img/index2.css' %}">
+        <style type="text/css">
+          #bg {
+            position: fixed; 
+            top: -50%; 
+            left: -50%; 
+            width: 200%; 
+            height: 200%;
+        }
+        #bg img {
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            bottom: 0; 
+            margin: auto; 
+            min-width: 50%;
+            min-height: 50%;
+        }
+    </style>
+      </head>
+<body>
+  {% comment %} <div id="bg">
+    <img src="{% static 'img/pic1.jpeg' %}" alt="">
+  </div> {% endcomment %}
+  <form autocomplete="off" action="index">
+    {% comment %} <img class="logo" src="{% static 'img/logo.jpeg' %}" /> {% endcomment %}
+
+    <div class="boxContainer"> 
+
+        <table class="elementsContainer" > 
+            
+
+        <tr> 
+            <td>
+                
+                 <input  type="text" placeholder="Search within an element of truth" class="search" name="q" value="{{ request.GET.q }}" required>
+                 
+
+            </td>
+            <td> 
+                
+                <button style="color: transparent; background-color: transparent; border-color: transparent; cursor: default;"><i class="material-icons">search</i></button>
+                
+            </td> 
+        </tr> 
+        </table> 
+    </div> 
+</form>
+{% comment %} <div class="count">Search within an element of truth</div> {% endcomment %}
+    
+</body>
+</html>
