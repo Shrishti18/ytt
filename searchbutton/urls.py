@@ -22,7 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/',views.index,name='index'),
     path('',views.index2,name='index2'),
-    path("add_video/", views.add_video, name="add_blogs"),
+    # path("add_video/", views.add_video, name="add_blogs"),
     # path("hi/",views.Import_Excel_pandas,name="Import_Excel_pandas"),
     # path('Import_Excel_pandas/', views.Import_Excel_pandas,name="Import_Excel_pandas"), 
     # path('Import_excel',views.Import_excel,name="Import_excel"),
