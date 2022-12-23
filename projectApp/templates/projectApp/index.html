@@ -1,13 +1,208 @@
 {% load blag_tags %}
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
         <title>Project</title>
-        <link rel="stylesheet" href="{% static 'img/index.css' %}">
+        {% comment %} <link rel="stylesheet" href="{% static 'img/index.css' %}"> {% endcomment %}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+        <style>
+          .boxContainer {
+            margin: auto;
+            margin-top: 7%;
+            position: relative;
+            width: 500px;
+            height: 42px;
+            border: 4px solid #2980b9;
+            padding: 0px 10px;
+            border-radius: 50px;
+        }
+        
+        .elementsContainer {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+        }
+        
+        .search {
+            border: none;
+            height: 50%;
+            width: 100%;
+            padding: 0px 5px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-family: "Nunito";
+            color: #424242;
+            font-weight: 500;
+        }
+        
+        .search:focus {
+            outline: none;
+        }
+        
+        .material-icons {
+            font-size: 26;
+            color: #2988b9;
+        }
+        
+        .count {
+            font-size: 26;
+            color: #2988b9;
+            align: center;
+            margin-left: 1%;
+            margin-top: 2.5%
+        }
+        
+        .headline {
+            font-size: 16px;
+        }
+        
+        
+        /* iframe {
+            border-left: 10px solid #2988b9;
+            border-right: 10px solid #2988b9;
+            border-radius: 5px;
+        } */
+        
+        a:link {
+            color: #2988b9;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: #8229B9;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #2988b9;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        
+        a:active {
+            color: #2998B9;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        
+        aside::-webkit-scrollbar {
+            display: none;
+        }
+        
+        aside section {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 55px;
+        }
+        
+        aside section .icons {
+            margin-bottom: 20px;
+        }
+        
+        aside section .icons.channels {
+            filter: none;
+            border-radius: 50%;
+        }
+        
+        .videos {
+            --video-width: 400px;
+            --video-height: 180px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(var(--video-width), max-content));
+            gap: 30px 50px;
+            justify-content: center;
+        }
+        
+        .video-data {
+            width: var(--video-width);
+        }
+        
+        .video {
+            width: 100%;
+            height: var(--video-height);
+            background-color: var(--grey-d);
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .video img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .video .duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: var(--bg);
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .video-info {
+            display: flex;
+            margin-top: 10px;
+            width: var(--video-width);
+        }
+        
+        .channel-pp img {
+            margin-right: 10px;
+            width: 36px;
+            height: 36px;
+            object-fit: cover;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .video-text-section {
+            flex: 1;
+        }
+        
+        .title {
+            font-weight: 700;
+            margin-bottom: 5px;
+            width: 100%;
+            line-height: 20px;
+            max-height: 45px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            cursor: pointer;
+        }
+        
+        .channel-name,
+        .views_upload-time {
+            font-family: Roboto;
+            color: var(--grey);
+        }
+        
+        .channel-name:hover {
+            color: var(--grey-l);
+            cursor: pointer;
+        }
+        
+        .views_upload-time span:first-child::after {
+            content: "•";
+            margin: 0 4px;
+        }
+        
+        .video-info .more {
+            justify-self: flex-end;
+            margin-top: 2px;
+        }
+        
+        .info-icon {
+            height: 14px;
+            width: 14px;
+        }
+      </style>
       </head>
 <body >
 <div class="container">

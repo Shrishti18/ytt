@@ -1,11 +1,9 @@
 {% load blag_tags %}
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
         <title>Project</title>
-        <link rel="stylesheet" href="{% static 'img/index2.css' %}">
         <style type="text/css">
           #bg {
             position: fixed; 
@@ -24,6 +22,94 @@
             min-width: 50%;
             min-height: 50%;
         }
+        .boxContainer {
+          margin: auto;
+          margin-top: 20%;
+          position: relative;
+          width: 500px;
+          height: 42px;
+          border: 4px solid #2980b9;
+          padding: 0px 10px;
+          border-radius: 50px;
+      }
+      
+      .elementsContainer {
+          width: 100%;
+          height: 100%;
+          vertical-align: middle;
+      }
+      
+      .search {
+          color: transparent;
+          background-color: transparent;
+          border-color: transparent;
+          border: none;
+          height: 100%;
+          width: 100%;
+          padding: 0px 5px;
+          border-radius: 50px;
+          font-size: 18px;
+          font-family: "Nunito";
+          color: #424242;
+          font-weight: 500;
+      }
+      
+      .search:focus {
+          outline: none;
+      }
+      
+      .material-icons {
+          font-size: 26;
+          color: #2988b9;
+      }
+      
+      .count {
+          font-size: 26;
+          color: #2988b9;
+          align: center;
+          margin-left: 40%;
+          margin-top: 1.5%
+      }
+      
+      .headline {
+          font-size: 16px;
+      }
+      
+      iframe {
+          border-left: 10px solid #2988b9;
+          border-right: 10px solid #2988b9;
+          border-radius: 5px;
+      }
+      
+      a:link {
+          color: #2988b9;
+          background-color: transparent;
+          text-decoration: none;
+      }
+      
+      a:visited {
+          color: #8229B9;
+          background-color: transparent;
+          text-decoration: none;
+      }
+      
+      a:hover {
+          color: #2988b9;
+          background-color: transparent;
+          text-decoration: underline;
+      }
+      
+      a:active {
+          color: #2998B9;
+          background-color: transparent;
+          text-decoration: underline;
+      }
+      
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
     </style>
       </head>
 <body>
