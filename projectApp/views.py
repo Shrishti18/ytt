@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from .models import Video
 from http.client import HTTPResponse
-import pandas as pd
+# import pandas as pd
 import os
-from django.core.files.storage import FileSystemStorage
+# from django.core.files.storage import FileSystemStorage
 # from tablib import Dataset
 # from .resources import VideoResource
 from django.contrib.postgres.search import SearchQuery, SearchVector,SearchRank,SearchHeadline
@@ -49,22 +49,22 @@ def add_video(request):
 # Create your views here.
 
  
-def Import_Excel_pandas(request):
+# def Import_Excel_pandas(request):
      
-    if request.method == 'POST' and request.FILES['myfile']: 
-        myfile = request.FILES['myfile']
-        fs = FileSystemStorage()
-        filename = fs.save(myfile.name, myfile)
-        uploaded_file_url = fs.url(filename)              
-        empexceldata = pd.read_excel(filename)        
-        dbframe = empexceldata
-        for dbframe in dbframe.itertuples():
-            obj = Video.objects.create(youtube_id=dbframe.id,title=dbframe.t,description=dbframe.desc )           
-            obj.save()
-        return render(request, 'projectApp/Import_excel_db.html', {
-            'uploaded_file_url': uploaded_file_url
-        })   
-    return render(request, 'projectApp/Import_excel_db.html',{})
+#     if request.method == 'POST' and request.FILES['myfile']: 
+#         myfile = request.FILES['myfile']
+#         fs = FileSystemStorage()
+#         filename = fs.save(myfile.name, myfile)
+#         uploaded_file_url = fs.url(filename)              
+#         empexceldata = pd.read_excel(filename)        
+#         dbframe = empexceldata
+#         for dbframe in dbframe.itertuples():
+#             obj = Video.objects.create(youtube_id=dbframe.id,title=dbframe.t,description=dbframe.desc )           
+#             obj.save()
+#         return render(request, 'projectApp/Import_excel_db.html', {
+#             'uploaded_file_url': uploaded_file_url
+#         })   
+#     return render(request, 'projectApp/Import_excel_db.html',{})
 
  
 # def Import_excel(request):
