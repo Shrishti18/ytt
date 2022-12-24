@@ -7,7 +7,6 @@ name = "pypi"
 psycopg2-binary = "*"
 django = "*"
 pandas = "*"
-requests = "*"
 
 [dev-packages]
 
