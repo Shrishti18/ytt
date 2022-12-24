@@ -19,7 +19,7 @@ from projectApp import views
 from django.conf.urls.static import static
 from searchbutton import settings
 urlpatterns = [
-    path('yt-sjld.vercel.app/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('index/',views.index,name='index'),
     path('',views.index2,name='index2'),
     # path("add_video/", views.add_video, name="add_blogs"),
